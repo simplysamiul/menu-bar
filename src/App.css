@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+.navbar{
+  font-size: 14px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu{
+  width: 100%;
+  background-color: darkblue;
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.menu a{
+  float: left;
+  padding: 12px 50px;
+  text-transform: uppercase;
+  font-family: "Baloo";
+  text-decoration: none;
+  color: #fff;
+
 }
 
-.App-link {
-  color: #61dafb;
+.menu li{
+  float: left;
+  box-shadow: 1px 0 0 #444;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu li:hover > a{
+  color: #fafafa;
+  background: #262626;
+}
+
+.menu li:hover > ul{
+  opacity: 1;
+  visibility: visible;
+  margin: 0;
+}
+
+.menu ul a:hover{
+  background-color: darkblue;
+}
+
+.menu ul li:first-child > a{
+  border-radius: 3px 3px 0 0;
+}
+
+.menu ul{
+  margin: 20px 0 0 0;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 46px;
+  left: 0;
+  z-index: 1;
+  background: #262626;
+  border-radius: 3px;
+  transition: all .3s ease-in-out;
+}
+
+.menu ul ul{
+  top: 0;
+  left: 150px;
+  margin: 0 0 0 20px;
+}
+
+.menu ul li{
+  float: none;
+  display: block;
+  border: 0;
+  box-shadow: 0 1px 0 #111, 0 2px 0 #666;
+}
+
+.menu ul li:last-child{
+  box-shadow: none;
+}
+
+.menu ul a{
+  padding: 10px;
+  width: 130px;
+  display: block;
+  white-space: nowrap;
+  float: none;
+  text-transform: uppercase;
+}
+
+.menu::after{
+
+}
+
+.menu::after{
+  content: " ";
+  display: table;
+}
+
+.menu::after{
+  clear: both;
 }
